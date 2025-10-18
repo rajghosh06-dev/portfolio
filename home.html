@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rishit Ghosh | HOME</title>
+
+  <!-- Social Preview Meta Tags -->
+  <meta property="og:title" content="Rishit Ghosh | Portfolio" />
+  <meta property="og:description" content="Explore my modular, dynamic portfolio showcasing skills, projects, and experience." />
+  <meta property="og:image" content="assets/thumbnail/RG-LOGO.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rajghosh06-dev.github.io/portfolio/home.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rishit Ghosh | Portfolio" />
+  <meta name="twitter:description" content="Modular, creative, and dynamic portfolio built with HTML, CSS, and JS." />
+  <meta name="twitter:image" content="assets/thumbnail/RG-LOGO.png" />
+
   <link rel="stylesheet" href="css/style.css" />
   <style>
     html {
@@ -105,12 +119,12 @@
       <div id="experience-list"></div>
     </section>
 
-    <div style="text-align: center; margin: 3rem 0;">
+    <div class="centered-section">
       <a href="contact.html" class="btn">📬 Let’s Connect</a>
     </div>
   </main>
   <a href="contact.html" class="floating-contact" aria-label="Contact Me">📨 Contact Me</a>
-  <a href="#" class="go-top" id="goTopBtn" aria-label="Back to top">⬆️ Top</a>
+  <a href="#" class="go-top" aria-label="Back to top">⬆️ Top</a>
 
   <div id="footer"></div>
   <script src="js/loadPartials.js"></script>
@@ -193,7 +207,7 @@
       }
 
       // Show "Go to Top" button on scroll
-      const goTopBtn = document.getElementById("goTopBtn");
+      const goTopBtn = document.querySelector(".go-top");
       if (goTopBtn) {
         window.addEventListener("scroll", () => {
           if (window.scrollY > 300) {
@@ -207,7 +221,6 @@
   </script>
   <div id="footer"></div>
   <script src="js/loadPartials.js"></script>
-  <a href="#" class="go-top" id="goTopBtn" aria-label="Back to top">⬆️ Top</a>
 </body>
 </html>
 
