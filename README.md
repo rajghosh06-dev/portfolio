@@ -2,9 +2,12 @@
 
 This is my modular, dynamic personal portfolio built with HTML, CSS, and JavaScript. It showcases my skills, education, projects, certifications, workshops, and experience—all loaded dynamically from JSON files for easy updates. The design is responsive, scroll-aware, and visually expressive with a custom color palette and interactive elements.
 
+👉 **To view the live portfolio, [click here](https://rajghosh06-dev.github.io/portfolio/).**
+
 ---
 
 ## 📁 File Structure
+
 ```
 portfolio/
 ├── index.html              # Landing page with hero intro
