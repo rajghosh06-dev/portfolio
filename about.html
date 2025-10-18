@@ -3,79 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Rishit Ghosh</title>
+  <title>Rishit Ghosh | ABOUT</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div id="header-section"></div>
+
   <header>
     <h1>About Me</h1>
     <nav>
       <a href="home.html">Home</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Me</a>
     </nav>
   </header>
 
-  <section class="card about-section">
-    <div class="about-container">
-      <img src="assets/pic/profile.png" alt="Rishit Ghosh" class="profile-pic" />
-      <div class="bio-text">
-        <p>Hello! I’m <strong>Rishit Ghosh</strong>, a Computer Science and Engineering student at Geethanjali College of Engineering and Technology, specializing in AI & ML. I’m driven by a passion for building scalable systems, contributing to open-source, and solving real-world problems through technology.</p>
-        <p>My journey is fueled by curiosity, collaboration, and a deep commitment to innovation and sustainability. I believe in turning ideas into impactful realities — whether through academic projects, hackathons, or community-driven development.</p>
-        <p>Explore my portfolio to discover how I blend technical precision with creative problem-solving to make a difference.</p>
+  <main>
+    <section class="card about-section">
+      <div class="about-container">
+        <img src="assets/pic/profile.png" alt="Rishit Ghosh" class="profile-pic" />
+        <div class="bio-text">
+          <p>Hello! I’m <strong>Rishit Ghosh</strong>, a Computer Science and Engineering student at Geethanjali College of Engineering and Technology, specializing in AI & ML. I’m driven by a passion for building scalable systems, contributing to open-source, and solving real-world problems through technology.</p>
+          <p>My journey is fueled by curiosity, collaboration, and a deep commitment to innovation and sustainability. I believe in turning ideas into impactful realities — whether through academic projects, hackathons, or community-driven development.</p>
+          <p>Explore my portfolio to discover how I blend technical precision with creative problem-solving to make a difference.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="card">
-    <h2>Academic Journey</h2>
-    <ul>
-      <li><strong>B.Tech in CSE (AI & ML)</strong></br>
-        <p><b>Geethanjali College of Engineering and Technology</b><br/> </p>
-        <p>📍 Cheeryal Village, Keesara Mandal, Hyderabad, Telangana – 501303<br/></p>
-        <p>📅 Expected Graduation: 2028 </p>
-      </li>
-      <li><strong>Intermediate – MPC</strong><br/>
-        <p><b>Sri Chaitanya Junior Kalasala</b></p>
-        <p>📍IDA Uppal, Hyderabad, Telangana – 500039 <br/></p>
-        <p>📅 Graduated: May 2024</p>
-      </li>
-      <li><strong>CBSE Schooling</strong><br/>
-        <p><b>Little Flower School</b><br/></p>
-        <p>📍Uppal, Hyderabad, Telangana – 500039 <br/></p>
-        <p>📅 Graduated: May 2022</p>
-      </li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Academic Journey</h2>
+      <ul id="academic-list"></ul>
+    </section>
 
-  <section class="card">
-    <h2>Experience</h2>
-    <h3>Academic Project: Employee Management System (C)</h3>
-    <ul>
-      <li>Built a CLI-based system using singly linked lists and dynamic memory allocation</li>
-      <li>Implemented salary logic with allowances, deductions, and tax estimation</li>
-      <li>Led debugging and error handling for smooth user experience</li>
-      <li>Reinforced modular design and team collaboration</li>
-    </ul>
+    <section class="card">
+      <h2>Experience</h2>
+      <div id="experience-list"></div>
+    </section>
 
-    <h3>Hackathon: Smart India Hackathon 2024</h3>
-    <ul>
-      <li>Theme: Robotics & Drones</li>
-      <li>Proposed a hybrid robo-drone for emergency rescue with AI, thermal imaging, and robotic arms</li>
-      <li>Represented GCET in internal selection rounds</li>
-      <li>Led system design and technical pitching for the Hybrid Rescue-Raptor</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Certifications & Workshops</h2>
+      <h3>🎓 Certifications</h3>
+      <ul id="certification-list"></ul>
+      <h3>🛠️ Workshops</h3>
+      <ul id="workshop-list"></ul>
+    </section>
+  </main>
 
-  <section class="card">
-    <h2>Certifications</h2>
-    <ul>
-      <li><strong>IKS–TKDL Workshop</strong> – Explored traditional knowledge systems, IP rights, and ethical AI development (75%+ merit certificate)</li>
-      <li><strong>NPTEL: Programming for Problem Solving in C</strong> – Mastered control structures, arrays, file handling, and modular logic</li>
-    </ul>
-  </section>
-
-  <footer>
-    &copy; 2025 Rishit Ghosh
-  </footer>
+  <div id="footer"></div>
+  <script src="js/loadPartials.js"></script>
+  <script src="js/main.js"></script>
+  <a href="#" class="go-top" id="goTopBtn" aria-label="Back to top">⬆️ Top</a>
 </body>
 </html>

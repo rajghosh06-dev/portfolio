@@ -18,29 +18,29 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => console.error("Error loading projects:", error));
 
   // Load Certifications & Workshops
-fetch("data/certificates.json")
-  .then(response => response.json())
-  .then(data => {
-    const certList = document.getElementById("certification-list");
-    const workshopList = document.getElementById("workshop-list");
+  fetch("data/certificates.json")
+    .then(response => response.json())
+    .then(data => {
+      const certList = document.getElementById("certification-list");
+      const workshopList = document.getElementById("workshop-list");
 
-    if (certList && data.certificates) {
-      data.certificates.forEach(cert => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${cert.title}</strong> – ${cert.description}`;
-        certList.appendChild(li);
-      });
-    }
+      if (certList && data.certificates) {
+        data.certificates.forEach(cert => {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${cert.title}</strong> – ${cert.description}`;
+          certList.appendChild(li);
+        });
+      }
 
-    if (workshopList && data.workshops) {
-      data.workshops.forEach(ws => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${ws.title}</strong> – ${ws.description}`;
-        workshopList.appendChild(li);
-      });
-    }
-  })
-  .catch(error => console.error("Error loading certifications/workshops:", error));
+      if (workshopList && data.workshops) {
+        data.workshops.forEach(ws => {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${ws.title}</strong> – ${ws.description}`;
+          workshopList.appendChild(li);
+        });
+      }
+    })
+    .catch(error => console.error("Error loading certifications/workshops:", error));
 
   // Load Experience
   fetch("data/experience.json")
@@ -70,4 +70,32 @@ fetch("data/certificates.json")
       }
     })
     .catch(error => console.error("Error loading experience:", error));
+
+  // Load Academic Journey
+  fetch("data/academics.json")
+    .then(response => response.json())
+    .then(data => {
+      const academicList = document.getElementById("academic-list");
+      if (academicList && data.academics) {
+        data.academics.forEach(entry => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <strong>${entry.level}</strong><br/>
+            <p><b>${entry.institution}</b></p>
+            <p>📍 ${entry.location}</p>
+            <p>📅 ${entry.graduation}</p>
+          `;
+          academicList.appendChild(li);
+        });
+      }
+    })
+    .catch(error => console.error("Error loading academic journey:", error));
+
+  // Show "Go to Top" button on scroll
+  const goTopBtn = document.getElementById("goTopBtn");
+  if (goTopBtn) {
+    window.addEventListener("scroll", () => {
+      goTopBtn.classList.toggle("show", window.scrollY > 300);
+    });
+  }
 });

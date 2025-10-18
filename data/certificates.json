@@ -4,17 +4,6 @@
     {
       "title": "NPTEL: Programming for Problem Solving in C",
       "description": "Mastered control structures, arrays, functions, and file handling"
-    }
-  ],
-  "workshops":
-  [
-    {
-      "title": "IKS–TKDL Workshop",
-      "description": "Explored traditional knowledge systems, IP rights, and TKDL applications (75%+ merit certificate)"
-    },
-    {
-      "title": "IBM SkillsBuild Workshop @ GCET",
-      "description": "5-day AI workshop with Magic Bus India Foundation focused on real-world applications and career readiness"
     },
     {
       "title": "IBM SkillsBuild – AI Fundamentals",
@@ -27,6 +16,17 @@
     {
       "title": "IBM SkillsBuild – Customer Engagement",
       "description": "Certified in Problem Solving & Process Controls"
+    }
+  ],
+  "workshops":
+  [
+    {
+      "title": "IKS–TKDL Workshop",
+      "description": "Explored traditional knowledge systems, IP rights, and TKDL applications (75%+ merit certificate)"
+    },
+    {
+      "title": "IBM SkillsBuild Workshop @ GCET",
+      "description": "5-day AI workshop with Magic Bus India Foundation focused on real-world applications and career readiness"
     }
   ],
   "_hidden":

@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Rishit Ghosh</title>
+  <title>Rishit Ghosh | HOME</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     .floating-contact {
       position: fixed;
       bottom: 20px;
@@ -36,75 +39,85 @@
     .btn-inline:hover {
       background: #00b3e6;
     }
+    .go-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #1e3c72;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 998;
+    }
+    .go-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .go-top:hover {
+      background: #16305d;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Rishit Ghosh</h1>
-    <nav>
-      <a href="index.html">Main</a>
-      <a href="about.html">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#experience">Experience</a>
-      <a href="contact.html">Contact Me</a>
-    </nav>
-  </header>
+  <div id="header-section"></div>
+  <div id="header-home"></div>
 
-  <section id="skills" class="card">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Python</strong> – AI, data science, automation, web development</li>
-      <li><strong>Java</strong> – Enterprise apps, Android, modular design</li>
-      <li><strong>C</strong> – Systems programming, embedded logic, CLI tools</li>
-      <li><strong>SQL</strong> – Data querying, dashboards, backend logic</li>
-      <li><strong>HTML/CSS/JS</strong> – Web development and UI/UX</li>
-    </ul>
-  </section>
+  <main>
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Python</strong> – AI, data science, automation, web development</li>
+        <li><strong>Java</strong> – Enterprise apps, Android, modular design</li>
+        <li><strong>C</strong> – Systems programming, embedded logic, CLI tools</li>
+        <li><strong>SQL</strong> – Data querying, dashboards, backend logic</li>
+        <li><strong>HTML/CSS/JS</strong> – Web development and UI/UX</li>
+      </ul>
+    </section>
 
-  <section id="education" class="card">
-    <h2>Education</h2>
-    <p><strong>B.Tech in Computer Science and Engineering (AI & ML)</strong><br/></p>
-    <p>Geethanjali College of Engineering and Technology, Hyderabad<br/></p>
-    <p>📅 Expected Graduation: 2028</p>
-  </section>
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <p><strong>B.Tech in Computer Science and Engineering (AI & ML)</strong></p>
+      <p>Geethanjali College of Engineering and Technology, Hyderabad</p>
+      <p>📅 Expected Graduation: 2028</p>
+    </section>
 
-  <section id="projects" class="card">
-    <h2>Projects</h2>
-    <ul id="project-list"></ul>
-  </section>
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <ul id="project-list"></ul>
+    </section>
 
-  <section id="certifications" class="card">
-    <h2>Certifications & Workshops</h2>
+    <section id="certifications" class="card">
+      <h2>Certifications & Workshops</h2>
+      <h3>🎓 Certifications</h3>
+      <ul id="certification-list"></ul>
+      <h3>🛠️ Workshops</h3>
+      <ul id="workshop-list"></ul>
+    </section>
 
-    <h3>🎓 Certifications</h3>
-    <ul id="certification-list"></ul>
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <div id="experience-list"></div>
+    </section>
 
-    <h3>🛠️ Workshops</h3>
-    <ul id="workshop-list"></ul>
-  </section>
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="contact.html" class="btn">📬 Let’s Connect</a>
+    </div>
+  </main>
+  <a href="contact.html" class="floating-contact" aria-label="Contact Me">📨 Contact Me</a>
+  <a href="#" class="go-top" id="goTopBtn" aria-label="Back to top">⬆️ Top</a>
 
-  <section id="experience" class="card">
-    <h2>Experience</h2>
-    <div id="experience-list"></div>
-  </section>
-
-  <!-- Call-to-Action Button After Experience -->
-  <div style="text-align: center; margin: 3rem 0;">
-    <a href="contact.html" class="btn">📬 Let’s Connect</a>
-  </div>
-
-  <!-- Floating Contact Button -->
-  <a href="contact.html" class="floating-contact">📨 Contact Me</a>
-
-  <footer>
-    &copy; 2025 Rishit Ghosh. Built with Microsoft Copilot❤️ and GitHub Pages.
-  </footer>
+  <div id="footer"></div>
+  <script src="js/loadPartials.js"></script>
 
   <script>
-    // Load Projects
+    document.addEventListener("DOMContentLoaded", () => {
+	// Load Projects
     fetch("data/projects.json")
       .then(response => response.json())
       .then(data => {
@@ -167,25 +180,34 @@
         }
       });
 
-    // Hide floating button when CTA is visible
-    const floatingBtn = document.querySelector(".floating-contact");
-    const ctaButton = document.querySelector(".btn[href='contact.html']");
+	// Hide floating button when CTA is visible
+      const floatingBtn = document.querySelector(".floating-contact");
+      const ctaButton = document.querySelector(".btn[href='contact.html']");
+      if (floatingBtn && ctaButton) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            floatingBtn.style.display = entry.isIntersecting ? "none" : "inline-block";
+          });
+        }, { threshold: 0.5 });
+        observer.observe(ctaButton);
+      }
 
-    if (floatingBtn && ctaButton) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            floatingBtn.style.display = "none";
+      // Show "Go to Top" button on scroll
+      const goTopBtn = document.getElementById("goTopBtn");
+      if (goTopBtn) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            goTopBtn.classList.add("show");
           } else {
-            floatingBtn.style.display = "inline-block";
+            goTopBtn.classList.remove("show");
           }
         });
-      }, {
-        threshold: 0.5
-      });
-
-      observer.observe(ctaButton);
-    }
+      }
+    });
   </script>
+  <div id="footer"></div>
+  <script src="js/loadPartials.js"></script>
+  <a href="#" class="go-top" id="goTopBtn" aria-label="Back to top">⬆️ Top</a>
 </body>
 </html>
+
