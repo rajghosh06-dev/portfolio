@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Rishit Ghosh</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00d4ff;
+      color: #1e3c72;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+      z-index: 999;
+    }
+    .floating-contact:hover {
+      background: #00b3e6;
+    }
+    .btn-inline {
+      display: inline-block;
+      background: #00d4ff;
+      color: #1e3c72;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-inline:hover {
+      background: #00b3e6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rishit Ghosh</h1>
+    <nav>
+      <a href="index.html">Main</a>
+      <a href="about.html">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="contact.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Python</strong> – AI, data science, automation, web development</li>
+      <li><strong>Java</strong> – Enterprise apps, Android, modular design</li>
+      <li><strong>C</strong> – Systems programming, embedded logic, CLI tools</li>
+      <li><strong>SQL</strong> – Data querying, dashboards, backend logic</li>
+      <li><strong>HTML/CSS/JS</strong> – Web development and UI/UX</li>
+    </ul>
+  </section>
+
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Computer Science and Engineering (AI & ML)</strong><br/></p>
+    <p>Geethanjali College of Engineering and Technology, Hyderabad<br/></p>
+    <p>📅 Expected Graduation: 2028</p>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <ul id="project-list"></ul>
+  </section>
+
+  <section id="certifications" class="card">
+    <h2>Certifications & Workshops</h2>
+
+    <h3>🎓 Certifications</h3>
+    <ul id="certification-list"></ul>
+
+    <h3>🛠️ Workshops</h3>
+    <ul id="workshop-list"></ul>
+  </section>
+
+  <section id="experience" class="card">
+    <h2>Experience</h2>
+    <div id="experience-list"></div>
+  </section>
+
+  <!-- Call-to-Action Button After Experience -->
+  <div style="text-align: center; margin: 3rem 0;">
+    <a href="contact.html" class="btn">📬 Let’s Connect</a>
+  </div>
+
+  <!-- Floating Contact Button -->
+  <a href="contact.html" class="floating-contact">📨 Contact Me</a>
+
+  <footer>
+    &copy; 2025 Rishit Ghosh. Built with Microsoft Copilot❤️ and GitHub Pages.
+  </footer>
+
+  <script>
+    // Load Projects
+    fetch("data/projects.json")
+      .then(response => response.json())
+      .then(data => {
+        const projectList = document.getElementById("project-list");
+        if (projectList && data.projects) {
+          data.projects.forEach(project => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${project.title}</strong> – ${project.description}`;
+            projectList.appendChild(li);
+          });
+        }
+      });
+
+    // Load Certifications & Workshops
+    fetch("data/certificates.json")
+      .then(response => response.json())
+      .then(data => {
+        const certList = document.getElementById("certification-list");
+        const workshopList = document.getElementById("workshop-list");
+
+        if (certList && data.certificates) {
+          data.certificates.forEach(cert => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${cert.title}</strong> – ${cert.description}`;
+            certList.appendChild(li);
+          });
+        }
+
+        if (workshopList && data.workshops) {
+          data.workshops.forEach(ws => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${ws.title}</strong> – ${ws.description}`;
+            workshopList.appendChild(li);
+          });
+        }
+      });
+
+    // Load Experience
+    fetch("data/experience.json")
+      .then(response => response.json())
+      .then(data => {
+        const experienceList = document.getElementById("experience-list");
+        if (experienceList && data.experiences) {
+          data.experiences.forEach(exp => {
+            const section = document.createElement("section");
+            const heading = document.createElement("h3");
+            heading.textContent = exp.title;
+            section.appendChild(heading);
+
+            const ul = document.createElement("ul");
+            exp.details.forEach(detail => {
+              const li = document.createElement("li");
+              li.textContent = detail;
+              ul.appendChild(li);
+            });
+
+            section.appendChild(ul);
+            experienceList.appendChild(section);
+          });
+        }
+      });
+
+    // Hide floating button when CTA is visible
+    const floatingBtn = document.querySelector(".floating-contact");
+    const ctaButton = document.querySelector(".btn[href='contact.html']");
+
+    if (floatingBtn && ctaButton) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            floatingBtn.style.display = "none";
+          } else {
+            floatingBtn.style.display = "inline-block";
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      observer.observe(ctaButton);
+    }
+  </script>
+</body>
+</html>
