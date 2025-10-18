@@ -1,0 +1,39 @@
+{
+  "certificates":
+  [
+    {
+      "title": "NPTEL: Programming for Problem Solving in C",
+      "description": "Mastered control structures, arrays, functions, and file handling"
+    }
+  ],
+  "workshops":
+  [
+    {
+      "title": "IKS–TKDL Workshop",
+      "description": "Explored traditional knowledge systems, IP rights, and TKDL applications (75%+ merit certificate)"
+    },
+    {
+      "title": "IBM SkillsBuild Workshop @ GCET",
+      "description": "5-day AI workshop with Magic Bus India Foundation focused on real-world applications and career readiness"
+    },
+    {
+      "title": "IBM SkillsBuild – AI Fundamentals",
+      "description": "Learned supervised learning, neural networks, and ethical AI principles"
+    },
+    {
+      "title": "IBM SkillsBuild – Customer Engagement",
+      "description": "Certified in Communication & Personality Dynamics"
+    },
+    {
+      "title": "IBM SkillsBuild – Customer Engagement",
+      "description": "Certified in Problem Solving & Process Controls"
+    }
+  ],
+  "_hidden":
+  [
+    {
+        "title":"AICTE Internship",
+        "description": "Pollution-Drift Predictor</strong> – Designed scalable AI/ML solution integrating geospatial data and predictive modeling for environmental sustainability"
+    }
+  ]
+}

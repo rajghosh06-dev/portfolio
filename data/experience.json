@@ -1,0 +1,22 @@
+{
+  "experiences":
+  [
+    {
+      "title": "Employee Management System (Academic Project)",
+      "details":
+      [
+        "Built a CLI-based system in C using singly linked lists and dynamic memory allocation",
+        "Implemented salary computation with allowances, deductions, and tax estimation",
+        "Led debugging and enhancement of switch-case logic for flexible user interaction"
+      ]
+    },
+    {
+      "title": "Smart India Hackathon 2024 – Hybrid Rescue-Raptor",
+      "details":
+      [
+        "Proposed a hybrid robo-drone with autonomous AI, thermal imaging, and robotic arms for emergency rescue",
+        "Collaborated on system architecture and technical pitching during inter-college selection"
+      ]
+    }
+  ]
+}

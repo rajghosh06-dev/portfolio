@@ -1,0 +1,28 @@
+{
+  "projects":
+  [
+    {
+      "title": "Campus Connect Portal",
+      "description": "Java & MySQL full-stack portal with DAO/Servlet architecture"
+    },
+    {
+      "title": "Employee Management System",
+      "description": "CLI app in C using linked lists and salary logic"
+    },
+    {
+      "title": "OSS Club – Milestones Timeline",
+      "description": "Modular HTML/CSS/JS redesign of OSS Club’s Events Timeline with contributor-friendly docs"
+    },
+    {
+      "title": "Hybrid Rescue-Raptor",
+      "description": "AI-powered robo-drone for emergency rescue"
+    }
+  ],
+  "_hidden":
+  [
+    {
+      "title": "Pollution-Drift Predictor",
+      "description": "Internship project under AICTE–Edunet–Shell using geospatial APIs"
+    }
+  ]
+}
