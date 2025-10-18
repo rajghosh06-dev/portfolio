@@ -28,12 +28,5 @@
       "title": "IBM SkillsBuild Workshop @ GCET",
       "description": "5-day AI workshop with Magic Bus India Foundation focused on real-world applications and career readiness"
     }
-  ],
-  "_hidden":
-  [
-    {
-        "title":"AICTE Internship",
-        "description": "Pollution-Drift Predictor</strong> – Designed scalable AI/ML solution integrating geospatial data and predictive modeling for environmental sustainability"
-    }
   ]
 }
