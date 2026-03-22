@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Button from "@/components/Button";
+import { withBasePath } from "@/utils/siteConfig";
 
 interface ProjectCardProps {
   title: string;
@@ -43,7 +44,7 @@ export default function ProjectCard({
             <span className="project-card__badge">{category}</span>
             <span className="project-card__note">{note}</span>
           </div>
-          <Image src={image} alt={title} width={800} height={450} className="project-card__image" />
+          <Image src={withBasePath(image)} alt={title} width={800} height={450} className="project-card__image" />
         </div>
       </div>
 

@@ -15,6 +15,10 @@
 
 # next.js
 /.next/
+.turbo/
+
+# GitHub Pages deployment output is generated in CI/local builds
+# and uploaded by Actions. It should not be committed.
 /out/
 
 # production
