@@ -22,6 +22,9 @@
 
 # misc
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
 *.pem
 
 # debug
@@ -35,6 +38,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# local/reference archives not needed for the live site
+/.tmp-old-portfolio/
+/.tmp-reference-navbar/
 
 # typescript
 *.tsbuildinfo
