@@ -1,0 +1,39 @@
+{
+  "skills": [
+    {
+      "name": "Python",
+      "icon": "BrainCircuit",
+      "description": "Used for AI exploration, data-oriented workflows, automation, and problem solving.",
+      "areas": ["AI", "Data science", "Automation", "Web experimentation"],
+      "accent": "cyan"
+    },
+    {
+      "name": "Java",
+      "icon": "Code2",
+      "description": "Applied to modular application logic and structured backend-oriented thinking.",
+      "areas": ["OOP", "Enterprise apps", "Modular design", "Application logic"],
+      "accent": "violet"
+    },
+    {
+      "name": "C",
+      "icon": "Binary",
+      "description": "Strengthens my systems-level reasoning through memory management and CLI workflows.",
+      "areas": ["Systems programming", "CLI tools", "Pointers", "Debugging discipline"],
+      "accent": "amber"
+    },
+    {
+      "name": "SQL",
+      "icon": "Database",
+      "description": "Supports structured querying, backend logic, and data-centric application flows.",
+      "areas": ["Queries", "Backend logic", "Data handling", "Relational thinking"],
+      "accent": "blue"
+    },
+    {
+      "name": "HTML / CSS / JavaScript",
+      "icon": "Braces",
+      "description": "The foundation of my front-end experimentation, layout thinking, and UI presentation work.",
+      "areas": ["Web development", "Responsive layout", "UI polish", "Interaction basics"],
+      "accent": "emerald"
+    }
+  ]
+}

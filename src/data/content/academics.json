@@ -1,0 +1,22 @@
+{
+  "academics": [
+    {
+      "level": "B.Tech in CSE (AI & ML)",
+      "institution": "Geethanjali College of Engineering and Technology",
+      "location": "Cheeryal Village, Keesara Mandal, Hyderabad, Telangana",
+      "graduation": "Expected Graduation: 2028"
+    },
+    {
+      "level": "Intermediate - MPC",
+      "institution": "Sri Chaitanya Junior Kalasala",
+      "location": "IDA Uppal, Hyderabad, Telangana",
+      "graduation": "Graduated: May 2024"
+    },
+    {
+      "level": "CBSE Schooling",
+      "institution": "Little Flower School",
+      "location": "Uppal, Hyderabad, Telangana",
+      "graduation": "Graduated: May 2022"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "certificates": [
+    {
+      "title": "NPTEL: Programming for Problem Solving in C",
+      "description": "Built confidence with control structures, arrays, functions, and file handling."
+    },
+    {
+      "title": "IBM SkillsBuild - AI Fundamentals",
+      "description": "Studied supervised learning, neural networks, and ethical AI principles."
+    },
+    {
+      "title": "IBM SkillsBuild - Customer Engagement",
+      "description": "Certified in Communication & Personality Dynamics."
+    },
+    {
+      "title": "IBM SkillsBuild - Customer Engagement",
+      "description": "Certified in Problem Solving & Process Controls."
+    }
+  ],
+  "workshops": [
+    {
+      "title": "IKS-TKDL Workshop",
+      "description": "Explored traditional knowledge systems, IP rights, and TKDL applications with merit recognition."
+    },
+    {
+      "title": "IBM SkillsBuild Workshop @ GCET",
+      "description": "Completed a 5-day AI workshop focused on practical applications and career readiness."
+    }
+  ]
+}

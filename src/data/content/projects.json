@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "title": "Campus Connect Portal",
+      "category": "Web Platform",
+      "summary": "Java and MySQL portal shaped around modular student workflows.",
+      "description": "A full-stack campus portal organized with DAO and Servlet architecture, aimed at keeping the backend maintainable while supporting real student-facing interactions.",
+      "stack": ["Java", "MySQL", "Servlets", "DAO Pattern"],
+      "highlights": [
+        "Focused on modular backend separation instead of monolithic logic.",
+        "Designed for cleaner academic and campus-oriented workflows.",
+        "Represents my interest in structure-first system design."
+      ],
+      "image": "/images/illustration-1.svg",
+      "note": "Architecture-focused academic build"
+    },
+    {
+      "title": "Employee Management System",
+      "category": "Systems",
+      "summary": "CLI-based C project centered on records, payroll logic, and linked lists.",
+      "description": "A command-line employee management application built in C using linked lists, dynamic memory allocation, and salary-processing logic with deductions and tax estimation.",
+      "stack": ["C", "Linked Lists", "CLI", "Dynamic Memory"],
+      "highlights": [
+        "Built core CRUD-style flows without relying on high-level frameworks.",
+        "Included salary computation with allowances, deductions, and estimates.",
+        "Strengthened debugging discipline and low-level problem solving."
+      ],
+      "image": "/images/illustration-2.svg",
+      "note": "Strong systems-programming exercise"
+    },
+    {
+      "title": "OSS Club - Milestones Timeline",
+      "category": "Open Source",
+      "summary": "Contributor-friendly timeline redesign for the OSS Club experience.",
+      "description": "A modular HTML, CSS, and JavaScript redesign of the OSS Club events timeline, with attention to documentation quality and maintainable front-end structure.",
+      "stack": ["HTML", "CSS", "JavaScript", "Documentation"],
+      "highlights": [
+        "Reworked presentation with cleaner modular structure.",
+        "Improved contributor readability and documentation flow.",
+        "Reflects my interest in polished interfaces and reusable front-end patterns."
+      ],
+      "image": "/images/illustration-3.svg",
+      "note": "Open-source oriented redesign work",
+      "link": "https://github.com/rajghosh06-dev/oss-website"
+    },
+    {
+      "title": "Hybrid Rescue-Raptor",
+      "category": "AI Concept",
+      "summary": "Emergency-rescue robo-drone concept proposed for hackathon problem solving.",
+      "description": "A concept for an AI-assisted hybrid robo-drone that combines autonomous support, thermal imaging, and robotic arms to assist emergency rescue scenarios.",
+      "stack": ["AI Systems", "Thermal Imaging", "Robotics", "Hackathon Ideation"],
+      "highlights": [
+        "Framed around real-world emergency response needs.",
+        "Combined AI thinking with hardware-oriented rescue concepts.",
+        "Included collaborative pitching and system-level reasoning."
+      ],
+      "image": "/images/illustration-1.svg",
+      "note": "Hackathon concept and technical pitch"
+    }
+  ]
+}

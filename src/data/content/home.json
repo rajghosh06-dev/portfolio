@@ -1,0 +1,10 @@
+{
+  "profileCard": {
+    "eyebrow": "Professional Profile"
+  },
+  "educationBoard": {
+    "statusLabel": "Currently Pursuing",
+    "experienceLabel": "Recent experience",
+    "learningLabel": "Learning momentum"
+  }
+}
