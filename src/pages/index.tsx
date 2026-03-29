@@ -49,6 +49,7 @@ export default function Home() {
         <meta property="og:image" content={siteConfig.url + siteConfig.ogImage} />
         <meta property="og:url" content={siteConfig.url} />
         <meta property="og:type" content="website" />
+        <meta name="author" content={siteConfig.author} />
       </Head>
       <MainLayout>
         <motion.section className="home-page" initial="hidden" animate="visible" variants={fadeInUp}>
