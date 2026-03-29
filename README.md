@@ -1,5 +1,17 @@
 # Rishit Ghosh Portfolio
 
+![Project Status: Active](https://img.shields.io/badge/status-active-brightgreen.svg)
+![License: MIT](https://img.shields.io/github/license/rajghosh06-dev/portfolio)
+![GitHub repo size](https://img.shields.io/github/repo-size/rajghosh06-dev/portfolio)
+![GitHub last commit](https://img.shields.io/github/last-commit/rajghosh06-dev/portfolio)
+![GitHub language count](https://img.shields.io/github/languages/count/rajghosh06-dev/portfolio)
+![GitHub top language](https://img.shields.io/github/languages/top/rajghosh06-dev/portfolio)
+![Visitors](https://hits.sh/github.com/rajghosh06-dev/portfolio.svg?style=social&label=Visitors)
+![GitHub stars](https://img.shields.io/github/stars/rajghosh06-dev/portfolio?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/rajghosh06-dev/portfolio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/rajghosh06-dev/portfolio?style=social)
+
+
 A multi-page personal portfolio built with Next.js, React, TypeScript, Framer Motion, and a heavily customized CSS system. The project is designed to present Rishit Ghosh’s academic background, projects, skills, experience, and contact channels in a polished, recruiter-friendly format while keeping content easy to maintain through centralized JSON files.
 
 This is not a generic starter anymore. The codebase has been refactored into a structured portfolio system with:
