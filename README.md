@@ -6,11 +6,14 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/rajghosh06-dev/portfolio)
 ![GitHub language count](https://img.shields.io/github/languages/count/rajghosh06-dev/portfolio)
 ![GitHub top language](https://img.shields.io/github/languages/top/rajghosh06-dev/portfolio)
-![Visitors](https://hits.sh/github.com/rajghosh06-dev/portfolio.svg?style=social&label=Visitors)
+
+[![Live Demo](https://img.shields.io/badge/demo-online-blue?style=social&logo=github)](https://rajghosh06-dev.github.io/portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/rajghosh06-dev/portfolio?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/rajghosh06-dev/portfolio?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/rajghosh06-dev/portfolio?style=social)
+![Visitors](https://hits.sh/github.com/rajghosh06-dev/portfolio.svg?style=social&label=Visitors)
 
+>🔗 **Live Portfolio:** [rajghosh06-dev.github.io/portfolio](https://rajghosh06-dev.github.io/portfolio)
 
 A multi-page personal portfolio built with Next.js, React, TypeScript, Framer Motion, and a heavily customized CSS system. The project is designed to present Rishit Ghosh’s academic background, projects, skills, experience, and contact channels in a polished, recruiter-friendly format while keeping content easy to maintain through centralized JSON files.
 
@@ -420,6 +423,9 @@ If a build shows `spawn EPERM` in a restricted Windows sandbox, that is an envir
 - LinkedIn: [rajghosh06](https://www.linkedin.com/in/rajghosh06/)
 - Twitter: [rajghosh06_dev](https://twitter.com/rajghosh06_dev)
 - Email: [rajghosh06.dev@gmail.com](mailto:rajghosh06.dev@gmail.com)
+
+## License
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
