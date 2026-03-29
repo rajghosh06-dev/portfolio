@@ -229,29 +229,121 @@ Important note: this is a deterrent, not absolute protection. Any browser-delive
 
 ## Tech Stack
 
-### Framework
+### Languages
 
-- Next.js `16.2.1`
-- Pages Router
+<div align="center">
 
-### Frontend
+<table align="center"><tbody><tr><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width=64 height=64 alt="TypeScript" />
+  <br><strong>TypeScript</strong>
+  <br><sub>v5</sub>
+  <br><sub>Primary typed application language</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width=64 height=64 alt="JavaScript" />
+  <br><strong>JavaScript</strong>
+  <br><sub>ES ecosystem</sub>
+  <br><sub>Runtime and browser compatibility layer</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width=64 height=64 alt="HTML5" />
+  <br><strong>HTML5</strong>
+  <br><sub>Markup standard</sub>
+  <br><sub>Semantic page structure</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width=64 height=64 alt="CSS3" />
+  <br><strong>CSS3</strong>
+  <br><sub>Styling foundation</sub>
+  <br><sub>Custom visual system and theming</sub>
+</td></tr></tbody></table>
 
-- React `19.2.4`
-- TypeScript `5`
-- Framer Motion `12.38.0`
-- Lucide React icons
+</div>
 
-### Styling
+### Frameworks & Libraries
 
-- Tailwind CSS installed in the project
-- custom global CSS as the primary styling system
-- Google Font imports through CSS
+<div align="center">
 
-### Tooling
+<table align="center"><tbody><tr><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" width=64 height=64 alt="Next.js" />
+  <br><strong>Next.js</strong>
+  <br><sub>v16.2.1</sub>
+  <br><sub>Pages Router with static export</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width=64 height=64 alt="React" />
+  <br><strong>React</strong>
+  <br><sub>v19.2.4</sub>
+  <br><sub>Component model and UI state</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" width=64 height=64 alt="Tailwind CSS" />
+  <br><strong>Tailwind CSS</strong>
+  <br><sub>v4.2.2</sub>
+  <br><sub>Installed alongside the custom CSS system</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/framermotion/framermotion-original.svg" width=64 height=64 alt="Framer Motion" />
+  <br><strong>Framer Motion</strong>
+  <br><sub>v12.38.0</sub>
+  <br><sub>Entry animation and motion polish</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/markdown/markdown-original.svg" width=64 height=64 alt="Lucide React" />
+  <br><strong>Lucide React</strong>
+  <br><sub>v0.577.0</sub>
+  <br><sub>Consistent iconography across the UI</sub>
+</td></tr></tbody></table>
 
-- ESLint
-- TypeScript type-checking during build
-- PostCSS / Autoprefixer
+</div>
+
+### Tooling & Services
+
+<div align="center">
+
+<table align="center"><tbody><tr><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width=64 height=64 alt="Git" />
+  <br><strong>Git</strong>
+  <br><sub>Version control</sub>
+  <br><sub>Branch-based workflow</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width=64 height=64 alt="GitHub" />
+  <br><strong>GitHub</strong>
+  <br><sub>Remote repository</sub>
+  <br><sub>Source hosting and collaboration</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width=64 height=64 alt="VS Code" />
+  <br><strong>VS Code</strong>
+  <br><sub>Primary editor</sub>
+  <br><sub>Development and debugging</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width=64 height=64 alt="npm" />
+  <br><strong>npm</strong>
+  <br><sub>Package manager</sub>
+  <br><sub>Dependency and script runner</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postcss/postcss-original.svg" width=64 height=64 alt="PostCSS" />
+  <br><strong>PostCSS</strong>
+  <br><sub>v8.5.8</sub>
+  <br><sub>CSS transform pipeline</sub>
+</td></tr><tr><td width="160"></td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg" width=64 height=64 alt="ESLint" />
+  <br><strong>ESLint</strong>
+  <br><sub>v9</sub>
+  <br><sub>Code quality and lint checks</sub>
+</td><td align="center" width="160">
+  <img src="https://cdn.simpleicons.org/googleforms/7248B9" width=64 height=64 alt="Google Forms" />
+  <br><strong>Google Forms</strong>
+  <br><sub>External form backend</sub>
+  <br><sub>Static-site contact collection</sub>
+</td><td align="center" width="160">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width=64 height=64 alt="GitHub Pages" />
+  <br><strong>GitHub Pages</strong>
+  <br><sub>Static deployment target</sub>
+  <br><sub>Hosts the exported portfolio</sub>
+</td><td width="160"></td></tr></tbody></table>
+
+</div>
+
+### What This Stack Supports
+
+- Static-first deployment through GitHub Pages using Next.js export mode
+- Motion-rich UI with React, Framer Motion, and a custom CSS-heavy presentation layer
+- Theme-aware surfaces across light mode, dark mode, and the experimental Glass Mode
+- A custom contact workflow that integrates Google Forms with an email-draft fallback
 
 ## Architecture
 
@@ -526,15 +618,44 @@ The project is routinely verified with:
 
 If a build shows `spawn EPERM` in a restricted Windows sandbox, that is an environment restriction rather than a project code issue.
 
-## Contact
-
-- GitHub: [rajghosh06-dev](https://github.com/rajghosh06-dev)
-- LinkedIn: [rajghosh06](https://www.linkedin.com/in/rajghosh06/)
-- Twitter: [rajghosh06_dev](https://twitter.com/rajghosh06_dev)
-- Email: [rajghosh06.dev@gmail.com](mailto:rajghosh06.dev@gmail.com)
-
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+<div align="center">
+
+<table align="center"><tbody><tr><td align="center" width="180">
+  <a href="https://github.com/rajghosh06-dev">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width=64 height=64 alt="GitHub" />
+  </a>
+  <br><strong>GitHub</strong>
+  <br><sub><a href="https://github.com/rajghosh06-dev">rajghosh06-dev</a></sub>
+  <br><sub>Code, repositories, and build history</sub>
+</td><td align="center" width="180">
+  <a href="https://www.linkedin.com/in/rajghosh06/">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg" width=64 height=64 alt="LinkedIn" />
+  </a>
+  <br><strong>LinkedIn</strong>
+  <br><sub><a href="https://www.linkedin.com/in/rajghosh06/">rajghosh06</a></sub>
+  <br><sub>Professional profile and networking</sub>
+</td><td align="center" width="180">
+  <a href="https://rajghosh06-dev.github.io/portfolio/">
+    <img src="https://raw.githubusercontent.com/rajghosh06-dev/portfolio/portfolio-v2LTS/public/icons/favicon.svg" width=64 height=64 alt="Portfolio" />
+  </a>
+  <br><strong>Portfolio</strong>
+  <br><sub><a href="https://rajghosh06-dev.github.io/portfolio/">Live site</a></sub>
+  <br><sub>Full project archive and design system</sub>
+</td><td align="center" width="180">
+  <a href="mailto:rishitghosh06@gmail.com">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width=64 height=64 alt="Email" />
+  </a>
+  <br><strong>Email</strong>
+  <br><sub><a href="mailto:rishitghosh06@gmail.com">rishitghosh06@gmail.com</a></sub>
+  <br><sub>Best for direct outreach and collaboration</sub>
+</td></tr></tbody></table>
+
+</div>
 
 ---
 
