@@ -282,7 +282,7 @@ Important note: this is a deterrent, not absolute protection. Any browser-delive
   <br><sub>v12.38.0</sub>
   <br><sub>Entry animation and motion polish</sub>
 </td><td align="center" width="160">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/markdown/markdown-original.svg" width=64 height=64 alt="Lucide React" />
+  <img src="https://cdn.simpleicons.org/lucide/ffffff" width=64 height=64 alt="Lucide React" />
   <br><strong>Lucide React</strong>
   <br><sub>v0.577.0</sub>
   <br><sub>Consistent iconography across the UI</sub>
