@@ -85,14 +85,15 @@ The Skills page organizes the technical foundation through:
 
 ### Contact
 
-The Contact page uses styled platform cards instead of bare hyperlinks. It presents:
+The Contact page combines styled platform cards with a custom message composer instead of relying on plain links alone. It presents:
 
 - email
 - GitHub
 - LinkedIn
 - Twitter
+- a custom "Send Message" panel below the cards
 
-Each platform is framed as an intentional contact surface rather than a plain text link list.
+Each platform is framed as an intentional contact surface rather than a plain text link list, and the composer adds a direct outreach path that still works within a static GitHub Pages deployment.
 
 ## Feature Highlights
 
@@ -149,6 +150,7 @@ TypeScript wrapper files inside `src/data/` read those JSON files and provide ty
 The project uses a reusable component layer for consistency:
 
 - [`Button.tsx`](src/components/Button.tsx) for CTA variants
+- [`ContactMessagePanel.tsx`](src/components/ContactMessagePanel.tsx) for the custom contact composer and submission logic
 - [`Navbar.tsx`](src/components/Navbar.tsx) for navigation and brand identity
 - [`DarkModeToggle.tsx`](src/components/DarkModeToggle.tsx) for light/dark switching
 - [`GlassModeToggle.tsx`](src/components/GlassModeToggle.tsx) for the experimental glass aesthetic
@@ -156,7 +158,53 @@ The project uses a reusable component layer for consistency:
 - [`SkillCard.tsx`](src/components/SkillCard.tsx) for skills presentation
 - [`Footer.tsx`](src/components/Footer.tsx) for footer shell and Glass Mode placement
 
-### 5. Motion and Interaction
+### 5. Contact Workflow
+
+The contact system is designed around the constraints of a static GitHub Pages deployment.
+
+Why this matters:
+
+- this portfolio is exported with `output: "export"`
+- GitHub Pages does not provide a Next.js backend or API routes
+- a normal server-side contact endpoint would not work here
+
+To solve that cleanly, the portfolio uses a hybrid contact flow:
+
+1. visitors fill out the custom form on the Contact page
+2. if Google Forms is enabled and configured, the browser posts the message into the published Google Form response endpoint
+3. if that handoff does not confirm in time, the portfolio falls back to a prefilled `mailto:` draft
+4. if Google Forms is intentionally disabled, the form skips straight to the email-draft backup flow
+
+This means the page can stay visually custom while the data still lands in a real collection system.
+
+The current contact message fields are:
+
+- Full Name
+- Email Address
+- Subject
+- Message
+
+The runtime is controlled in [`src/data/contact.ts`](src/data/contact.ts) through `contactFormConfig`.
+
+That config currently stores:
+
+- `recipientEmail` for the fallback email-draft route
+- `googleForms.enabled` to decide whether Google Forms is the primary route
+- `googleForms.formId` for the published Google Form
+- `googleForms.pageHistory` and `googleForms.fbzx` for the Google form submission payload
+- `googleForms.fields.*` mappings for the required `entry.xxxxxxxx` ids
+
+The actual UI and submission behavior live in [`src/components/ContactMessagePanel.tsx`](src/components/ContactMessagePanel.tsx).
+
+The page-level integration happens in [`src/pages/contact.tsx`](src/pages/contact.tsx), and the visual system for light mode, dark mode, and Glass Mode is handled in [`src/styles/globals.css`](src/styles/globals.css).
+
+Important implementation note:
+
+- Google Forms success is inferred from the submission handoff through a hidden transport frame
+- because this is not a first-party JSON API, the success state is practical and reliable for normal usage, but not as authoritative as a dedicated backend response
+- the email-draft fallback exists to keep the contact path resilient even if Google does not confirm in time
+
+### 6. Motion and Interaction
 
 Framer Motion is used for entry animations, while CSS handles:
 
@@ -168,7 +216,7 @@ Framer Motion is used for entry animations, while CSS handles:
 
 The result is a portfolio that feels active without becoming noisy.
 
-### 6. Profile Image Protection
+### 7. Profile Image Protection
 
 The profile photo on the home page uses a wrapper in [`src/security/ProtectedImage.tsx`](src/security/ProtectedImage.tsx) to discourage casual image downloading by:
 
@@ -259,6 +307,7 @@ This portfolio currently relies more on carefully authored CSS than on utility-o
 src/
 ├── components/
 │   ├── Button.tsx
+│   ├── ContactMessagePanel.tsx
 │   ├── DarkModeToggle.tsx
 │   ├── Footer.tsx
 │   ├── GlassModeToggle.tsx
@@ -339,6 +388,43 @@ Edit:
 
 - [`src/data/content/skills.json`](src/data/content/skills.json)
 
+### Update contact form routing
+
+Edit:
+
+- [`src/data/contact.ts`](src/data/contact.ts)
+
+This file now controls both the visible contact links and the message-composer submission flow.
+
+If you need to update the Google Forms integration:
+
+1. publish the responder form
+2. copy the form id from the public form URL
+3. copy the `entry.xxxxxxxx` ids for each field from the form source
+4. update:
+   - `googleForms.formId`
+   - `googleForms.pageHistory`
+   - `googleForms.fbzx`
+   - `googleForms.fields.name`
+   - `googleForms.fields.email`
+   - `googleForms.fields.subject`
+   - `googleForms.fields.message`
+5. keep `googleForms.enabled` as `true`
+
+If you want to force the backup path for testing:
+
+- temporarily set `googleForms.enabled` to `false`
+
+Then open:
+
+```text
+http://localhost:3000/contact/
+```
+
+That bypasses Google Forms and opens the prefilled email-draft route instead.
+
+If the Google Form structure changes later, re-check the ids because Google can regenerate them after edits.
+
 ## Local Development
 
 ### Install dependencies
@@ -352,6 +438,14 @@ npm install
 ```bash
 npm run dev
 ```
+
+Then open:
+
+```text
+http://localhost:3000/contact/
+```
+
+to test the contact experience locally.
 
 ### Lint the project
 
@@ -395,6 +489,21 @@ The portfolio intentionally avoids a plain boilerplate look. It leans into:
 - gradient accents
 - frosted surfaces
 - glassmorphism as an optional premium layer
+
+### Contact testing notes
+
+The contact system can be tested in two modes:
+
+- Google Forms primary mode:
+  keep `googleForms.enabled` set to `true`
+- Email fallback mode:
+  temporarily set `googleForms.enabled` to `false`
+
+When Google Forms is enabled, the page attempts to submit to the Google form first.
+
+When Google Forms is disabled, or when the Google handoff does not confirm in time, the portfolio opens a prefilled email draft using the configured `recipientEmail`.
+
+This behavior is especially useful on GitHub Pages because it gives the portfolio a functional backup path without needing a custom backend.
 
 ## Why This Project Stands Out
 

@@ -1,5 +1,6 @@
 import MainLayout from "@/layouts/MainLayout";
 import { contactLinks } from "@/data/contact";
+import ContactMessagePanel from "@/components/ContactMessagePanel";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
@@ -124,6 +125,8 @@ export default function Contact() {
             </div>
           </motion.aside>
         </motion.div>
+
+        <ContactMessagePanel />
       </motion.section>
     </MainLayout>
   );
