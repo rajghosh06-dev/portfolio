@@ -46,6 +46,12 @@ yarn-error.log*
 # local/reference archives not needed for the live site
 /.tmp-old-portfolio/
 /.tmp-reference-navbar/
+/.qa-shots/
+/.edge-cdp-profile/
+/.edge-profile/
+/.chrome-profile/
+/.tmp-dev.log
+/.tmp-dev.err
 
 # typescript
 *.tsbuildinfo

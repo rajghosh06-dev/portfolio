@@ -14,6 +14,7 @@ html, body {
   color: #0f172a;
   background-color: #f8fafc;
   background-image: none;
+  overflow-x: hidden;
 }
 
 body[data-bg="particles"] {
@@ -4026,6 +4027,384 @@ html.dark .projects-page__filter--active {
   .skills-page__cta {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* Dedicated mobile refinement layer */
+@media (max-width: 960px) {
+  .home-page,
+  .projects-page,
+  .skills-page,
+  .about-page,
+  .contact-page {
+    width: 100%;
+  }
+
+  .home-page__hero-grid {
+    min-height: auto;
+  }
+
+  .home-page__hero-copy,
+  .home-page__hero-board,
+  .home-page__content-grid,
+  .projects-page__grid,
+  .skills-page__grid,
+  .about-page__grid,
+  .contact-page__layout,
+  .contact-page__grid,
+  .contact-page__composer-shell,
+  .skills-page__details {
+    min-width: 0;
+  }
+
+  .home-page__snapshot-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page__feature-card--credentials {
+    grid-column: auto;
+  }
+
+  .home-page__section-heading,
+  .home-page__board-topline,
+  .contact-page__form-head,
+  .contact-page__form-actions,
+  .skills-page__cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-page__cta-row > *,
+  .home-page__bottom-cta > *,
+  .skills-page__cta > * {
+    width: 100%;
+  }
+
+  .home-page__cta-row .app-button,
+  .home-page__bottom-cta .app-button,
+  .skills-page__cta .skills-page__cta-link,
+  .contact-page__form-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-card__media-meta {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .project-card__note,
+  .project-card__badge {
+    max-width: 100%;
+  }
+}
+
+/* Dedicated tablet refinement layer */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .layout-main {
+    padding-inline: clamp(1.1rem, 2.4vw, 1.6rem);
+    padding-top: 6.8rem;
+  }
+
+  .portfolio-nav {
+    padding-inline: 0.85rem;
+  }
+
+  .portfolio-nav__pill,
+  .portfolio-nav__mobile-menu {
+    width: min(calc(100% - 0.9rem), 1240px);
+  }
+
+  .home-page,
+  .projects-page,
+  .skills-page,
+  .about-page,
+  .contact-page {
+    width: 100%;
+    padding-top: 1.85rem;
+    padding-bottom: 4rem;
+  }
+
+  .home-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.9rem;
+    min-height: auto;
+  }
+
+  .home-page__hero-copy,
+  .home-page__hero-board,
+  .home-page__content-grid,
+  .projects-page__grid,
+  .skills-page__grid,
+  .about-page__grid,
+  .contact-page__layout,
+  .contact-page__grid,
+  .contact-page__composer-shell,
+  .skills-page__details {
+    min-width: 0;
+  }
+
+  .home-page__headline {
+    max-width: 9.75ch;
+    font-size: clamp(3.15rem, 6.6vw, 4.5rem);
+  }
+
+  .home-page__lead {
+    max-width: 52rem;
+  }
+
+  .home-page__cta-row {
+    flex-wrap: wrap;
+    margin-bottom: 1.55rem;
+  }
+
+  .home-page__cta-row > *,
+  .home-page__bottom-cta > * {
+    flex: 1 1 14rem;
+  }
+
+  .home-page__snapshot-row {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr));
+  }
+
+  .home-page__profile-card {
+    grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1fr);
+  }
+
+  .home-page__profile-media {
+    min-height: 18rem;
+  }
+
+  .home-page__content-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  }
+
+  .home-page__board-columns {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .home-page__feature-card--credentials,
+  .about-page__card--wide {
+    grid-column: 1 / -1;
+  }
+
+  .projects-page__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-page__stat-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .projects-page__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 21.75rem), 1fr));
+  }
+
+  .skills-page__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.75rem), 1fr));
+  }
+
+  .skills-page__details,
+  .contact-page__layout,
+  .contact-page__composer-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+
+  .contact-page__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr));
+  }
+
+  .project-card__media-meta,
+  .contact-page__form-head,
+  .contact-page__form-actions,
+  .skills-page__cta {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .project-card__image {
+    height: clamp(10rem, 23vw, 12rem);
+  }
+
+  .project-card__badge,
+  .project-card__note {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1100px) {
+  .portfolio-nav__pill {
+    gap: 1.5rem;
+    padding-inline: 1.4rem;
+  }
+
+  .portfolio-nav__links {
+    gap: 0.3rem;
+  }
+
+  .portfolio-nav__link {
+    padding-inline: 0.78rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-nav {
+    padding: 0.65rem 0.75rem 0;
+  }
+
+  .portfolio-nav__pill,
+  .portfolio-nav__mobile-menu {
+    width: min(calc(100% - 0.5rem), 1540px);
+  }
+
+  .portfolio-nav__pill {
+    min-height: auto;
+    border-radius: 1.7rem;
+    padding: 0.85rem 0.95rem;
+  }
+
+  .portfolio-nav__mobile-menu {
+    border-radius: 1.6rem;
+  }
+
+  .layout-main {
+    padding-top: 6.25rem;
+  }
+
+  .home-page,
+  .projects-page,
+  .skills-page,
+  .about-page,
+  .contact-page {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .home-page__shell {
+    gap: 1.35rem;
+  }
+
+  .home-page__headline {
+    max-width: 8ch;
+    font-size: clamp(2.65rem, 13vw, 3.55rem);
+    line-height: 1;
+  }
+
+  .home-page__lead,
+  .projects-page__lead,
+  .skills-page__lead,
+  .about-page__lead,
+  .contact-page__lead {
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .home-page__eyebrow,
+  .projects-page__eyebrow,
+  .skills-page__eyebrow,
+  .about-page__eyebrow,
+  .contact-page__eyebrow {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-page__cta-row,
+  .projects-page__filters {
+    gap: 0.75rem;
+  }
+
+  .app-button--lg,
+  .app-button--md {
+    width: 100%;
+  }
+
+  .home-page__profile-card,
+  .home-page__hero-board-card,
+  .home-page__feature-card,
+  .projects-page__stat-card,
+  .project-card,
+  .skill-card,
+  .skills-page__panel,
+  .skills-page__cta,
+  .about-page__card,
+  .about-page__closing,
+  .about-page__cta,
+  .contact-page__card,
+  .contact-page__aside-block,
+  .contact-page__composer-shell,
+  .contact-page__signal-panel,
+  .contact-page__form-shell {
+    border-radius: 1.45rem;
+  }
+
+  .home-page__profile-card,
+  .home-page__hero-board-card,
+  .home-page__feature-card,
+  .project-card__body,
+  .skill-card,
+  .skills-page__panel,
+  .skills-page__cta,
+  .about-page__card,
+  .about-page__closing,
+  .contact-page__card,
+  .contact-page__aside-block,
+  .contact-page__composer-shell,
+  .contact-page__signal-panel,
+  .contact-page__form-shell {
+    padding: 1.1rem;
+  }
+
+  .home-page__profile-media {
+    min-height: 14.5rem;
+  }
+
+  .home-page__board-education {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .home-page__board-badge {
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 1rem;
+  }
+
+  .home-page__board-education h2,
+  .home-page__section-heading h2,
+  .project-card__title,
+  .skill-card__title,
+  .contact-page__form-title {
+    font-size: 1.3rem;
+  }
+
+  .home-page__board-skill-cloud,
+  .project-card__stack,
+  .skill-card__areas,
+  .home-page__profile-tags {
+    gap: 0.5rem;
+  }
+
+  .home-page__board-skill-cloud span,
+  .project-card__chip,
+  .skill-card__pill,
+  .home-page__profile-tags span,
+  .project-card__badge,
+  .project-card__note {
+    font-size: 0.76rem;
+  }
+
+  .project-card__image {
+    height: 9.5rem;
+  }
+
+  .site-footer {
+    padding-inline: 1rem;
   }
 }
 

@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Rishit Ghosh | Portfolio</title>
         <meta name="description" content="Rishit Ghosh's personal portfolio. Web developer with Next.js, Tailwind, and Framer Motion." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" type="image/svg+xml" href={withBasePath("/icons/favicon.svg")} />
         <link rel="shortcut icon" href={withBasePath("/icons/favicon.svg")} />
         <style>{`:root { --site-base-path: "${siteConfig.basePath}"; --site-dark-bg-image: url("${withBasePath("/images/bg-dark-new.svg")}"); }`}</style>
