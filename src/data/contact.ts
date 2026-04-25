@@ -1,7 +1,7 @@
 export const contactLinks = [
   {
     name: "Email",
-    url: "mailto:rajghosh06.dev@gmail.com",
+    url: "mailto:rishitghosh06@gmail.com",
   },
   {
     name: "GitHub",
